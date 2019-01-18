@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		EA57212021F27E780074155C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57211F21F27E780074155C /* AppDelegate.swift */; };
-		EA57212221F27E780074155C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57212121F27E780074155C /* ViewController.swift */; };
+		EA57212221F27E780074155C /* CoffeeOrderSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57212121F27E780074155C /* CoffeeOrderSelectorViewController.swift */; };
 		EA57212521F27E780074155C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA57212321F27E780074155C /* Main.storyboard */; };
 		EA57212721F27E790074155C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA57212621F27E790074155C /* Assets.xcassets */; };
 		EA57212A21F27E790074155C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA57212821F27E790074155C /* LaunchScreen.storyboard */; };
+		EA57213221F280620074155C /* CoffeeOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57213121F280620074155C /* CoffeeOrder.swift */; };
+		EA57213421F284290074155C /* CoffeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57213321F284290074155C /* CoffeeView.swift */; };
+		EA57213621F2845C0074155C /* CoffeeHero.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA57213521F2845C0074155C /* CoffeeHero.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EA57211C21F27E780074155C /* PillzCoffeeOrder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PillzCoffeeOrder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA57211F21F27E780074155C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EA57212121F27E780074155C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EA57212121F27E780074155C /* CoffeeOrderSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeOrderSelectorViewController.swift; sourceTree = "<group>"; };
 		EA57212421F27E780074155C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA57212621F27E790074155C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA57212921F27E790074155C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA57212B21F27E790074155C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA57213121F280620074155C /* CoffeeOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeOrder.swift; sourceTree = "<group>"; };
+		EA57213321F284290074155C /* CoffeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeView.swift; sourceTree = "<group>"; };
+		EA57213521F2845C0074155C /* CoffeeHero.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoffeeHero.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +61,11 @@
 			isa = PBXGroup;
 			children = (
 				EA57211F21F27E780074155C /* AppDelegate.swift */,
-				EA57212121F27E780074155C /* ViewController.swift */,
+				EA57212121F27E780074155C /* CoffeeOrderSelectorViewController.swift */,
+				EA57213121F280620074155C /* CoffeeOrder.swift */,
 				EA57212321F27E780074155C /* Main.storyboard */,
+				EA57213321F284290074155C /* CoffeeView.swift */,
+				EA57213521F2845C0074155C /* CoffeeHero.xib */,
 				EA57212621F27E790074155C /* Assets.xcassets */,
 				EA57212821F27E790074155C /* LaunchScreen.storyboard */,
 				EA57212B21F27E790074155C /* Info.plist */,
@@ -123,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA57212A21F27E790074155C /* LaunchScreen.storyboard in Resources */,
+				EA57213621F2845C0074155C /* CoffeeHero.xib in Resources */,
 				EA57212721F27E790074155C /* Assets.xcassets in Resources */,
 				EA57212521F27E780074155C /* Main.storyboard in Resources */,
 			);
@@ -135,8 +145,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA57212221F27E780074155C /* ViewController.swift in Sources */,
+				EA57212221F27E780074155C /* CoffeeOrderSelectorViewController.swift in Sources */,
 				EA57212021F27E780074155C /* AppDelegate.swift in Sources */,
+				EA57213421F284290074155C /* CoffeeView.swift in Sources */,
+				EA57213221F280620074155C /* CoffeeOrder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
