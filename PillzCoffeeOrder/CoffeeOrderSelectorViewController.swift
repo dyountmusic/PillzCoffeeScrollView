@@ -34,6 +34,15 @@ class CoffeeOrderSelectorViewController: UIViewController, UIScrollViewDelegate 
             counter += 1
         }
         
+        setupFirstCoffee()
+        
+    }
+    
+    func setupFirstCoffee() {
+        let coffee = coffeeOrders.first
+        self.coffeeTitle.text = coffee?.title
+        self.coffeeSubtitle.text = coffee?.subtitle
+        self.view.backgroundColor = coffee?.color
     }
     
     func setupScrollView() {
@@ -52,16 +61,21 @@ class CoffeeOrderSelectorViewController: UIViewController, UIScrollViewDelegate 
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         var counter = 0
+        let contentSize = scrollView.contentSize
+        
         for subview in scrollView.subviews {
+
+            let crossPoint = scrollView.bounds.midX
             
-//            print("subview number \(counter) has a midX point of \(subview.frame.midX) which we are comparing to \(scrollView.bounds.midX)")
-            
-            if (subview.frame.midX == scrollView.bounds.midX) {
+            if (subview.frame.midX == crossPoint) {
                 print("The item in focus is \(counter)")
                 let coffee = coffeeOrders[counter]
                 self.coffeeTitle.text = coffee.title
                 self.coffeeSubtitle.text = coffee.subtitle
-                self.view.backgroundColor = coffee.color
+                
+                UIView.animate(withDuration: 0.3) {
+                    self.view.backgroundColor = coffee.color
+                }
             }
             
             counter += 1
