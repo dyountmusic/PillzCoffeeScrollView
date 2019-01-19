@@ -18,16 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DnV-Z6-843">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DnV-Z6-843">
+                                <rect key="frame" x="0.0" y="268" width="414" height="380"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="DnV-Z6-843" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2li-dn-oXD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DnV-Z6-843" secondAttribute="bottom" constant="-34" id="bmv-Vk-ERY"/>
-                            <constraint firstItem="DnV-Z6-843" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-44" id="heo-yc-EpP"/>
-                            <constraint firstAttribute="trailing" secondItem="DnV-Z6-843" secondAttribute="trailing" id="w7Y-z9-fPf"/>
+                            <constraint firstItem="DnV-Z6-843" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="224" id="HS9-3g-9qk"/>
+                            <constraint firstItem="DnV-Z6-843" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="I5u-xQ-Z6c"/>
+                            <constraint firstItem="DnV-Z6-843" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Oea-oZ-sr0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DnV-Z6-843" secondAttribute="bottom" constant="214" id="nNu-zD-wpT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

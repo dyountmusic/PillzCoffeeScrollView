@@ -49,6 +49,11 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="S4V-Vn-yPf" secondAttribute="bottom" constant="166" id="oJJ-YM-ICA"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="coffeeHeroImage" destination="S4V-Vn-yPf" id="g50-aj-VR8"/>
+                <outlet property="subtitleLabel" destination="I1j-DD-iHU" id="Q6Q-7j-iiu"/>
+                <outlet property="titleLabel" destination="G5S-LM-hXg" id="bSO-fV-YWP"/>
+            </connections>
             <point key="canvasLocation" x="144.80000000000001" y="48.125937031484263"/>
         </view>
     </objects>
