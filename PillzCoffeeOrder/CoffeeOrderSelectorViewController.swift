@@ -17,14 +17,9 @@ class CoffeeOrderSelectorViewController: UIViewController, UIScrollViewDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        coffeeHeroScrollView.delegate = self
-        
-        coffeeHeroScrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height)
-        
-        print(coffeeHeroScrollView.contentSize)
+        setupScrollView()
         
         let view1 = UIView()
-        
         view1.frame = CGRect(x: view.frame.width * 0, y: 0, width: coffeeHeroScrollView.frame.width, height: coffeeHeroScrollView.frame.height)
         view1.backgroundColor = .red
         let view2 = UIView()
@@ -37,7 +32,16 @@ class CoffeeOrderSelectorViewController: UIViewController, UIScrollViewDelegate 
         coffeeHeroScrollView.addSubview(view1)
         coffeeHeroScrollView.addSubview(view2)
         
+    }
+    
+    func setupScrollView() {
+        coffeeHeroScrollView.delegate = self
+        coffeeHeroScrollView.showsHorizontalScrollIndicator = false
+        coffeeHeroScrollView.showsVerticalScrollIndicator = false
+        coffeeHeroScrollView.isPagingEnabled = true
         coffeeHeroScrollView.isScrollEnabled = true
+        
+        coffeeHeroScrollView.contentSize = CGSize(width: coffeeHeroScrollView.frame.width * 2, height: coffeeHeroScrollView.frame.height)
         
     }
     
