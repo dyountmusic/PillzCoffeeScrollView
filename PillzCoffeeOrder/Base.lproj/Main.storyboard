@@ -21,18 +21,42 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DnV-Z6-843">
                                 <rect key="frame" x="0.0" y="268" width="414" height="380"/>
                             </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p5c-SJ-6Qf">
+                                <rect key="frame" x="20" y="111" width="374" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="PJh-Qc-nCS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2j-eb-BC4">
+                                <rect key="frame" x="20" y="155" width="374" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="p5c-SJ-6Qf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="AxB-zO-als"/>
+                            <constraint firstItem="p5c-SJ-6Qf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="67" id="FjA-KZ-h3U"/>
                             <constraint firstItem="DnV-Z6-843" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="224" id="HS9-3g-9qk"/>
                             <constraint firstItem="DnV-Z6-843" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="I5u-xQ-Z6c"/>
                             <constraint firstItem="DnV-Z6-843" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Oea-oZ-sr0"/>
+                            <constraint firstItem="r2j-eb-BC4" firstAttribute="centerX" secondItem="DnV-Z6-843" secondAttribute="centerX" id="cS8-5F-5GT"/>
+                            <constraint firstItem="DnV-Z6-843" firstAttribute="top" secondItem="r2j-eb-BC4" secondAttribute="bottom" constant="77" id="h8y-sX-rse"/>
+                            <constraint firstItem="p5c-SJ-6Qf" firstAttribute="trailing" secondItem="r2j-eb-BC4" secondAttribute="trailing" id="hMe-7r-LR6"/>
+                            <constraint firstItem="p5c-SJ-6Qf" firstAttribute="leading" secondItem="r2j-eb-BC4" secondAttribute="leading" id="jFO-E2-Fov"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DnV-Z6-843" secondAttribute="bottom" constant="214" id="nNu-zD-wpT"/>
+                            <constraint firstItem="r2j-eb-BC4" firstAttribute="top" secondItem="p5c-SJ-6Qf" secondAttribute="bottom" constant="8" symbolic="YES" id="nlx-1r-Sqc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="coffeeHeroScrollView" destination="DnV-Z6-843" id="fZM-3N-Yzi"/>
+                        <outlet property="coffeeSubtitle" destination="r2j-eb-BC4" id="ONO-8j-Ubx"/>
+                        <outlet property="coffeeTitle" destination="p5c-SJ-6Qf" id="p8Q-Qc-FlD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
