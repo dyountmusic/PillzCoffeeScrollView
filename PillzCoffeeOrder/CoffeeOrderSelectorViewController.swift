@@ -14,8 +14,18 @@ class CoffeeOrderSelectorViewController: UIViewController, UIScrollViewDelegate 
     @IBOutlet weak var coffeeTitle: UILabel!
     @IBOutlet weak var coffeeSubtitle: UILabel!
     
-    var currentItemInFocus: CoffeeOrder?
+    var currentItemInFocus: CoffeeOrder? {
+        didSet {
+            self.coffeeTitle.text = currentItemInFocus?.title
+            self.coffeeSubtitle.text = currentItemInFocus?.subtitle
+            UIView.animate(withDuration: 0.5) {
+                self.view.backgroundColor = self.currentItemInFocus?.color
+            }
+        }
+    }
     var coffeeOrders: [CoffeeOrder] = [CoffeeOrder]()
+    
+    private var transitioningInfoProvider: HorizontalSceneTransitionInfoProvider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +38,7 @@ class CoffeeOrderSelectorViewController: UIViewController, UIScrollViewDelegate 
         for coffee in coffeeOrders {
             
             let view = UIImageView(frame: CGRect(x: coffeeHeroScrollView.frame.width * CGFloat(counter), y: 0, width: coffeeHeroScrollView.frame.width, height: coffeeHeroScrollView.frame.height))
+            
             view.image = coffee.image
             view.contentMode = .scaleAspectFit
             self.coffeeHeroScrollView.addSubview(view)
@@ -35,6 +46,8 @@ class CoffeeOrderSelectorViewController: UIViewController, UIScrollViewDelegate 
         }
         
         setupFirstCoffee()
+        
+        transitioningInfoProvider = HorizontalSceneTransitionInfoProvider(containerView: coffeeHeroScrollView, scenes: coffeeHeroScrollView.subviews)
         
     }
     
@@ -60,28 +73,21 @@ class CoffeeOrderSelectorViewController: UIViewController, UIScrollViewDelegate 
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
         var counter = 0
-        let contentSize = scrollView.contentSize
         
         for subview in scrollView.subviews {
-
-            let crossPoint = scrollView.bounds.midX
             
-            if (subview.frame.midX == crossPoint) {
-                print("The item in focus is \(counter)")
-                let coffee = coffeeOrders[counter]
-                self.coffeeTitle.text = coffee.title
-                self.coffeeSubtitle.text = coffee.subtitle
-                
-                UIView.animate(withDuration: 0.3) {
-                    self.view.backgroundColor = coffee.color
-                }
+            guard let transitioningInfoProvider = transitioningInfoProvider else { return }
+            
+            let percent = transitioningInfoProvider.percentageComplete(for: subview)
+            
+            if transitioningInfoProvider.isMainScene(scene: subview) {
+                currentItemInFocus = coffeeOrders[counter]
             }
             
             counter += 1
-            
         }
-        
     }
     
     func createCoffeeOrders() -> [CoffeeOrder] {
@@ -104,3 +110,17 @@ class CoffeeOrderSelectorViewController: UIViewController, UIScrollViewDelegate 
 
 }
 
+extension UIColor {
+    func interpolateRGBColorTo(_ end: UIColor, fraction: CGFloat) -> UIColor? {
+        let f = min(max(0, fraction), 1)
+        
+        guard let c1 = self.cgColor.components, let c2 = end.cgColor.components else { return nil }
+        
+        let r: CGFloat = CGFloat(c1[0] + (c2[0] - c1[0]) * f)
+        let g: CGFloat = CGFloat(c1[1] + (c2[1] - c1[1]) * f)
+        let b: CGFloat = CGFloat(c1[2] + (c2[2] - c1[2]) * f)
+        let a: CGFloat = CGFloat(c1[3] + (c2[3] - c1[3]) * f)
+        
+        return UIColor(red: r, green: g, blue: b, alpha: a)
+    }
+}

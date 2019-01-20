@@ -13,6 +13,7 @@
 		EA57212721F27E790074155C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA57212621F27E790074155C /* Assets.xcassets */; };
 		EA57212A21F27E790074155C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA57212821F27E790074155C /* LaunchScreen.storyboard */; };
 		EA57213221F280620074155C /* CoffeeOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57213121F280620074155C /* CoffeeOrder.swift */; };
+		EA57213821F3EE630074155C /* HorizontalSceneTransitionInfoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57213721F3EE630074155C /* HorizontalSceneTransitionInfoProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		EA57212921F27E790074155C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA57212B21F27E790074155C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA57213121F280620074155C /* CoffeeOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeOrder.swift; sourceTree = "<group>"; };
+		EA57213721F3EE630074155C /* HorizontalSceneTransitionInfoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSceneTransitionInfoProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				EA57211F21F27E780074155C /* AppDelegate.swift */,
 				EA57212121F27E780074155C /* CoffeeOrderSelectorViewController.swift */,
 				EA57213121F280620074155C /* CoffeeOrder.swift */,
+				EA57213721F3EE630074155C /* HorizontalSceneTransitionInfoProvider.swift */,
 				EA57212321F27E780074155C /* Main.storyboard */,
 				EA57212621F27E790074155C /* Assets.xcassets */,
 				EA57212821F27E790074155C /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA57213821F3EE630074155C /* HorizontalSceneTransitionInfoProvider.swift in Sources */,
 				EA57212221F27E780074155C /* CoffeeOrderSelectorViewController.swift in Sources */,
 				EA57212021F27E780074155C /* AppDelegate.swift in Sources */,
 				EA57213221F280620074155C /* CoffeeOrder.swift in Sources */,
