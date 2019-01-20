@@ -92,6 +92,9 @@ class CoffeeOrderSelectorViewController: UIViewController, UIScrollViewDelegate 
     
     func createCoffeeOrders() -> [CoffeeOrder] {
         
+        let flickrAPIClient = FlickrAPIAlbumDownloader()
+        flickrAPIClient.downloadAlbum()
+        
         var result = [CoffeeOrder]()
         
         let coffeeOrder1 = CoffeeOrder(title: "Mint Mojito", subtitle: "Is it Mint Mojito time?", image: #imageLiteral(resourceName: "mintMojito"), color: UIColor(red:0.32, green:0.90, blue:0.56, alpha:1.0))
@@ -100,9 +103,18 @@ class CoffeeOrderSelectorViewController: UIViewController, UIScrollViewDelegate 
         
         let coffeeOrder3 = CoffeeOrder(title: "Tesora", subtitle: "Got time for our classic Tesora?", image: #imageLiteral(resourceName: "tesora"), color: UIColor(red:1.00, green:0.66, blue:0.00, alpha:1.0))
         
+        let coffeeOrder4 = CoffeeOrder(title: "Ecstatic", subtitle: "Excited for an Ecstatic?", image: #imageLiteral(resourceName: "ecstatic"), color: UIColor(red:0.96, green:0.53, blue:0.01, alpha:1.0))
+        
+        let coffeeOrder5 = CoffeeOrder(title: "Jacob’s Wonderbar", subtitle: "Enjoy a Jacob’s Wonderbar?", image: #imageLiteral(resourceName: "jacobswonderbar"), color: UIColor(red:0.42, green:0.26, blue:0.13, alpha:1.0))
+        
+        let coffeeOrder6 = CoffeeOrder(title: "Philharmonic", subtitle: "Craving a Philharmonic?", image: #imageLiteral(resourceName: "philharmonic"), color: UIColor(red:0.31, green:0.83, blue:0.64, alpha:1.0))
+        
         result.append(coffeeOrder1)
         result.append(coffeeOrder2)
         result.append(coffeeOrder3)
+        result.append(coffeeOrder4)
+        result.append(coffeeOrder5)
+        result.append(coffeeOrder6)
         
         return result
     }
